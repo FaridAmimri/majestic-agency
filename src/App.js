@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import Feature from './components/Feature'
 import Introduction from './components/Introduction'
 import Navbar from './components/Navbar'
+import Service from './components/Service'
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
       <Container>
         <Feature />
         <FeatureShape />
+      </Container>
+      <Container>
+        <Service />
+        <ServiceShape />
       </Container>
     </>
   )
@@ -48,4 +53,10 @@ const FeatureShape = styled.div`
   ${Shape}
   clip-path: polygon(0 0, 50% 0%, 33% 100%, 0 100%);
   background-color: pink;
+`
+
+const ServiceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
+  background-color: #f88497;
 `
