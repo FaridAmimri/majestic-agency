@@ -6,6 +6,7 @@ import Introduction from './components/Introduction'
 import Feature from './components/Feature'
 import Service from './components/Service'
 import Price from './components/Price'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
       <Container>
         <Price />
         <PriceShape />
+      </Container>
+      <Container>
+        <Contact />
       </Container>
     </>
   )
