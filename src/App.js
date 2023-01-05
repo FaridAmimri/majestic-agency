@@ -10,6 +10,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+  const smallScreen = window.screen.width <= 480 ? true : false
+
   return (
     <>
       <Container>
@@ -23,7 +25,7 @@ function App() {
       </Container>
       <Container>
         <Service />
-        <ServiceShape />
+        {!smallScreen && <ServiceShape />}
       </Container>
       <Container>
         <Price />

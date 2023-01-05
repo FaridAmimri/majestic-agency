@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import PhoneIcon from '@mui/icons-material/Phone'
-import Solution from '../assets/solution.png'
+import IntroIcon from '../assets/intro.png'
 import Animation from './Animation'
 
 function Introduction() {
@@ -29,7 +29,7 @@ function Introduction() {
         </Information>
       </Left>
       <Right>
-        <Image src={Solution} />
+        <Image src={IntroIcon} />
       </Right>
       <Animation />
     </Container>
@@ -42,6 +42,9 @@ const Container = styled.div`
   height: calc(100vh - 50px);
   display: flex;
   padding: 20px;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `
 
 const Left = styled.div`
@@ -50,11 +53,19 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Title = styled.h1`
   width: 60%;
   font-size: 60px;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    font-size: 50px;
+  }
 `
 
 const Description = styled.p`
@@ -62,6 +73,9 @@ const Description = styled.p`
   font-size: 20px;
   margin-top: 20px;
   font-weight: 500;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `
 
 const Information = styled.div`
@@ -69,12 +83,19 @@ const Information = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `
 
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 30px;
+  @media only screen and (max-width: 480px) {
+    margin-top: 20px;
+  }
 `
 
 const ContactPhone = styled.span`
@@ -97,8 +118,14 @@ const ContactText = styled.span`
 
 const Right = styled.div`
   width: 40%;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const Image = styled.img`
   width: 115%;
+  @media only screen and (max-width: 480px) {
+    width: 50%;
+  }
 `

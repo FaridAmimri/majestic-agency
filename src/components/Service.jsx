@@ -53,10 +53,17 @@ export default Service
 
 const Container = styled.div`
   display: flex;
+  @media only screen and (max-width: 480px) {
+    padding: 20px;
+    height: 100%;
+  }
 `
 
 const Left = styled.div`
   width: 50%;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const Image = styled.img`
@@ -69,6 +76,9 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `
 
 const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 /** @format */
 
 import styled from 'styled-components'
-import Location from '../assets/location.png'
+import FeatureIcon from '../assets/feature.png'
 import Button from '@mui/material/Button'
 import Animation from './Animation'
 
@@ -9,7 +9,7 @@ function Feature() {
   return (
     <Container>
       <Left>
-        <Image src={Location} />
+        <Image src={FeatureIcon} />
       </Left>
       <Right>
         <Title>
@@ -42,10 +42,16 @@ export default Feature
 
 const Container = styled.div`
   display: flex;
+  @media only screen and (max-width: 480px) {
+    padding: 30px;
+  }
 `
 
 const Left = styled.div`
   width: 50%;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const Image = styled.img`
@@ -58,10 +64,17 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 40px;
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding: 0;
+  }
 `
 
 const Title = styled.span`
   font-size: 45px;
+  @media only screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `
 
 const SubTitle = styled.span`

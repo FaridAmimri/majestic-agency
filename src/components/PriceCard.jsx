@@ -12,12 +12,13 @@ function PriceCard({ price, type, total, children }) {
     <Card
       sx={{
         maxWidth: 300,
-        height: 400,
+        maxHeight: 380,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: ' 20px'
+        padding: ' 20px',
+        margin: '10px'
       }}
     >
       <CardContent>
@@ -36,7 +37,7 @@ function PriceCard({ price, type, total, children }) {
       </CardContent>
       <CardActions>
         <Action>
-          <Button variant='outlined' size='medium'>
+          <Button variant='outlined' size='small'>
             Join Now
           </Button>
         </Action>
@@ -56,6 +57,9 @@ const PriceContainer = styled.div`
 const Price = styled.span`
   font-weight: bold;
   font-size: 50px;
+  @media only screen and (max-width: 480px) {
+    font-size: 30px;
+  }
 `
 
 const PlanType = styled.div`
@@ -73,4 +77,6 @@ const Extra = styled.p`
   font-weight: bold;
 `
 
-const Action = styled.div``
+const Action = styled.div`
+  margin-bottom: 20px;
+`

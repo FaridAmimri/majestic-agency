@@ -20,11 +20,7 @@ function Contact() {
           noValidate
           autoComplete='off'
         >
-          <Title>
-            Des questions ?
-            <br />
-            Entrons en contact
-          </Title>
+          <Title>Entrons en contact</Title>
           <FormContainer>
             <LeftForm>
               <TextField label='Your Name' />
@@ -65,6 +61,9 @@ const Container = styled.div`
   height: 90%;
   background-color: #d32f2f0a;
   padding-left: 40px;
+  @media only screen and (max-width: 480px) {
+    padding: 0;
+  }
 `
 
 const Wrapper = styled.div`
@@ -73,15 +72,27 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    justify-content: inherit;
+  }
 `
 
 const FormContainer = styled.div`
   width: 50%;
   display: flex;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+  }
 `
 
 const Title = styled.h1`
   margin: 10px;
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+  }
 `
 
 const LeftForm = styled.div`
@@ -89,6 +100,10 @@ const LeftForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media only screen and (max-width: 480px) {
+    height: 50%;
+    flex-direction: column;
+  }
 `
 
 const RightForm = styled.div`
@@ -100,19 +115,32 @@ const RightForm = styled.div`
 
 const ContactContainer = styled.div`
   width: 50%;
+  @media only screen and (max-width: 480px) {
+    width: 90%;
+  }
 `
 
 const ContactItem = styled.div`
   display: flex;
   margin: 0 0 30px 80px;
+  @media only screen and (max-width: 480px) {
+    margin: 10px 0;
+  }
 `
 
 const Icon = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 20px;
+  @media only screen and (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+  }
 `
 
 const Text = styled.span`
   font-size: 20px;
+  @media only screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 `

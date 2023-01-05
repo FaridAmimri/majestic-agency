@@ -2,13 +2,22 @@
 
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 function Navbar() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#fff'
+      }
+    }
+  })
+
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Logo>Majesctic</Logo>
+          <Logo>Majestic</Logo>
         </Left>
         <Center>
           <Menu>
@@ -18,7 +27,11 @@ function Navbar() {
           </Menu>
         </Center>
         <Right>
-          <Button variant='outlined'>Contactez-nous</Button>
+          <ThemeProvider theme={theme}>
+            <Button variant='outlined' size='small'>
+              Contactez-nous
+            </Button>
+          </ThemeProvider>
         </Right>
       </Wrapper>
     </Container>
@@ -48,13 +61,16 @@ const Logo = styled.h1`
 const Center = styled.div`
   flex: 2;
   display: flex;
-  justify-content: center;
   align-items: center;
 `
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const MenuItem = styled.li`
