@@ -7,6 +7,7 @@ import Button from '@mui/material/Button'
 import MapIcon from '../assets/map.png'
 import PhoneIcon from '../assets/phone.png'
 import SendIcon from '../assets/send.png'
+import TimeIcon from '../assets/time.png'
 
 function Contact() {
   return (
@@ -39,7 +40,7 @@ function Contact() {
         <ContactContainer>
           <ContactItem>
             <Icon src={MapIcon} />
-            <Text>14 rue Alfred Dumont, 59140 Dunkerque</Text>
+            <Text>13 rue Alfred Dumont, 59140 Dunkerque</Text>
           </ContactItem>
           <ContactItem>
             <Icon src={PhoneIcon} />
@@ -48,6 +49,12 @@ function Contact() {
           <ContactItem>
             <Icon src={SendIcon} />
             <Text>contact@majesticdom.fr</Text>
+          </ContactItem>
+          <ContactItem>
+            <Icon src={TimeIcon} />
+            <Text>
+              Ouvert du lundi au vendredi : <br /> De 9h à 12h et de 13h à 18h
+            </Text>
           </ContactItem>
         </ContactContainer>
       </Wrapper>
@@ -61,6 +68,7 @@ const Container = styled.div`
   height: 90%;
   background-color: #d32f2f0a;
   padding-left: 40px;
+
   @media only screen and (max-width: 480px) {
     padding: 0;
   }
@@ -72,17 +80,29 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   @media only screen and (max-width: 480px) {
     flex-direction: column;
     justify-content: inherit;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
   }
 `
 
 const FormContainer = styled.div`
   width: 50%;
   display: flex;
+
   @media only screen and (max-width: 480px) {
     flex-direction: column;
+    width: 100%;
+    height: 90%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
     width: 100%;
     height: 90%;
   }
@@ -90,6 +110,7 @@ const FormContainer = styled.div`
 
 const Title = styled.h1`
   margin: 10px;
+
   @media only screen and (max-width: 480px) {
     font-size: 20px;
   }
@@ -100,6 +121,7 @@ const LeftForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   @media only screen and (max-width: 480px) {
     height: 50%;
     flex-direction: column;
@@ -115,16 +137,24 @@ const RightForm = styled.div`
 
 const ContactContainer = styled.div`
   width: 50%;
+
   @media only screen and (max-width: 480px) {
     width: 90%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 80%;
   }
 `
 
 const ContactItem = styled.div`
   display: flex;
   margin: 0 0 30px 80px;
+
   @media only screen and (max-width: 480px) {
     margin: 10px 0;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    margin: 8px 0;
   }
 `
 
@@ -132,6 +162,7 @@ const Icon = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 20px;
+
   @media only screen and (max-width: 480px) {
     width: 20px;
     height: 20px;
@@ -140,6 +171,7 @@ const Icon = styled.img`
 
 const Text = styled.span`
   font-size: 20px;
+
   @media only screen and (max-width: 480px) {
     font-size: 16px;
   }

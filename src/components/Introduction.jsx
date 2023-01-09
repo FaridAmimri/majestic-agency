@@ -16,13 +16,13 @@ function Introduction() {
           entreprise chez Majestic.
         </Description>
         <Information>
-          <Button variant='contained' size='large'>
+          <Button variant='contained' size='medium'>
             Domicilier mon entreprise
           </Button>
           <Contact>
             <ContactPhone>
               <PhoneIcon />
-              <PhoneNumber> +33 6 52 15 65 75</PhoneNumber>
+              <PhoneNumber>09 86 12 18 21</PhoneNumber>
             </ContactPhone>
             <ContactText>Besoin d'aide ?</ContactText>
           </Contact>
@@ -42,8 +42,12 @@ const Container = styled.div`
   height: calc(100vh - 50px);
   display: flex;
   padding: 20px;
+
   @media only screen and (max-width: 480px) {
     flex-direction: column;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    justify-content: center;
   }
 `
 
@@ -53,8 +57,13 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @media only screen and (max-width: 480px) {
     width: 100%;
+    height: 100%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 90%;
     height: 100%;
   }
 `
@@ -62,7 +71,12 @@ const Left = styled.div`
 const Title = styled.h1`
   width: 60%;
   font-size: 60px;
+
   @media only screen and (max-width: 480px) {
+    width: 100%;
+    font-size: 40px;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
     width: 100%;
     font-size: 50px;
   }
@@ -73,7 +87,11 @@ const Description = styled.p`
   font-size: 20px;
   margin-top: 20px;
   font-weight: 500;
+
   @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -83,9 +101,15 @@ const Information = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media only screen and (max-width: 480px) {
     width: 100%;
     flex-direction: column;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
@@ -93,8 +117,13 @@ const Contact = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 30px;
+
   @media only screen and (max-width: 480px) {
     margin-top: 20px;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    margin-top: 20px;
+    padding: 0;
   }
 `
 
@@ -118,8 +147,12 @@ const ContactText = styled.span`
 
 const Right = styled.div`
   width: 40%;
+
   @media only screen and (max-width: 480px) {
     display: none;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    align-self: flex-end;
   }
 `
 

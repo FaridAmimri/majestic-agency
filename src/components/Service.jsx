@@ -27,9 +27,10 @@ function Service() {
           <Item>
             <Icon src={SupportIcon}></Icon>
             <Content>
-              <Title>Accompagnement juridique</Title>
+              <Title>Un conseiller disponible</Title>
               <Description>
-                Votre avocat disponible par téléphone ou whatsapp
+                Un accompagnement juridique pour tout type d'entreprise y
+                compris les associations
               </Description>
             </Content>
           </Item>
@@ -53,16 +54,28 @@ export default Service
 
 const Container = styled.div`
   display: flex;
+
   @media only screen and (max-width: 480px) {
     padding: 20px;
+    height: 100%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    padding: 10px;
     height: 100%;
   }
 `
 
 const Left = styled.div`
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media only screen and (max-width: 480px) {
     display: none;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 30%;
   }
 `
 
@@ -76,8 +89,12 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media only screen and (max-width: 480px) {
     width: 100%;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 70%;
   }
 `
 
@@ -93,6 +110,10 @@ const Item = styled.div`
   margin-bottom: 40px;
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `
 
 const Icon = styled.img`

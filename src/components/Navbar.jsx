@@ -3,6 +3,7 @@
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import LogoIcon from '../assets/logo.png'
 
 function Navbar() {
   const theme = createTheme({
@@ -17,7 +18,11 @@ function Navbar() {
     <Container>
       <Wrapper>
         <Left>
-          <Logo>Majestic</Logo>
+          <LogoContainer>
+            {/* <Title>Majestic</Title>
+            <Subtitle>Domiciliation</Subtitle> */}
+            <Logo src={LogoIcon}></Logo>
+          </LogoContainer>
         </Left>
         <Center>
           <Menu>
@@ -29,7 +34,7 @@ function Navbar() {
         <Right>
           <ThemeProvider theme={theme}>
             <Button variant='outlined' size='small'>
-              Contactez-nous
+              Agrément n° 59-2022-15
             </Button>
           </ThemeProvider>
         </Right>
@@ -52,10 +57,30 @@ const Wrapper = styled.div`
 
 const Left = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
 `
 
-const Logo = styled.h1`
-  font-weight: bold;
+const LogoContainer = styled.div`
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+`
+
+// const Title = styled.h2`
+//   width: 100px;
+//   text-align: center;
+// `
+
+// const Subtitle = styled.h6`
+//   width: 100px;
+//   text-align: center;
+//   font-size: 10px;
+//   color: gray;
+// `
+
+const Logo = styled.img`
+  height: 50px;
 `
 
 const Center = styled.div`
@@ -71,6 +96,9 @@ const Menu = styled.ul`
   @media only screen and (max-width: 480px) {
     display: none;
   }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 const MenuItem = styled.li`
@@ -78,6 +106,10 @@ const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
   color: grey;
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 15px;
+  }
 `
 
 const Right = styled.div`

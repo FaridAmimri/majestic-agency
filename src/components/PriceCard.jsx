@@ -27,7 +27,7 @@ function PriceCard({ price, type, total, children }) {
             <Price>{price}</Price>€/mois
           </PriceContainer>
           <PlanType>
-            <Button variant='outlined' size='Medium' color='error'>
+            <Button variant='outlined' size='small' color='error'>
               {type}
             </Button>
           </PlanType>
@@ -57,8 +57,12 @@ const PriceContainer = styled.div`
 const Price = styled.span`
   font-weight: bold;
   font-size: 50px;
+
   @media only screen and (max-width: 480px) {
     font-size: 30px;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 35px;
   }
 `
 

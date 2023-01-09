@@ -1,11 +1,15 @@
 /** @format */
 
 import styled from 'styled-components'
+import FacebookIcon from '../assets/facebook.png'
 
 function Footer() {
   return (
     <Container>
       <Copyright>Majestic Domiciliation Ⓒ</Copyright>
+      <SocialMedia>
+        <SocialIcon src={FacebookIcon} />
+      </SocialMedia>
     </Container>
   )
 }
@@ -22,3 +26,12 @@ const Container = styled.div`
 `
 
 const Copyright = styled.span``
+
+const SocialMedia = styled.div`
+  display: flex;
+`
+
+const SocialIcon = styled.img`
+  width: 25px;
+  height: 25px;
+`
