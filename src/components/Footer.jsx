@@ -6,9 +6,16 @@ import FacebookIcon from '../assets/facebook.png'
 function Footer() {
   return (
     <Container>
-      <Copyright>Majestic Domiciliation Ⓒ</Copyright>
+      <Copyright>Retrouvez-nous sur Facebook</Copyright>
+
       <SocialMedia>
-        <SocialIcon src={FacebookIcon} />
+        <a
+          href='https://www.facebook.com/profile.php?id=100088925397727'
+          target='blank'
+        >
+          <SocialIcon src={FacebookIcon} />
+          <SocialText>Majestic Dom</SocialText>
+        </a>
       </SocialMedia>
     </Container>
   )
@@ -28,10 +35,21 @@ const Container = styled.div`
 const Copyright = styled.span``
 
 const SocialMedia = styled.div`
-  display: flex;
+  padding-left: 10px;
+  a {
+    text-decoration-line: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 `
 
 const SocialIcon = styled.img`
   width: 25px;
   height: 25px;
+`
+
+const SocialText = styled.span`
+  padding-left: 5px;
 `

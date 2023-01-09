@@ -7,7 +7,7 @@ import Animation from './Animation'
 
 function Feature() {
   return (
-    <Container>
+    <Container id='feature'>
       <Left>
         <Image src={FeatureIcon} />
       </Left>

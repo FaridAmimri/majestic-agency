@@ -11,12 +11,12 @@ import TimeIcon from '../assets/time.png'
 
 function Contact() {
   return (
-    <Container>
+    <Container id='contact'>
       <Wrapper>
         <Box
           component='form'
           sx={{
-            '& .MuiTextField-root': { m: 1, width: '25ch' }
+            '& .MuiTextField-root': { m: 1, width: '30ch' }
           }}
           noValidate
           autoComplete='off'
@@ -52,9 +52,7 @@ function Contact() {
           </ContactItem>
           <ContactItem>
             <Icon src={TimeIcon} />
-            <Text>
-              Ouvert du lundi au vendredi : <br /> De 9h à 12h et de 13h à 18h
-            </Text>
+            <Text>De 9h à 12h et de 13h à 18h</Text>
           </ContactItem>
         </ContactContainer>
       </Wrapper>
@@ -72,29 +70,29 @@ const Container = styled.div`
   @media only screen and (max-width: 480px) {
     padding: 0;
   }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 const Wrapper = styled.div`
   height: 100%;
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (max-width: 480px) {
     flex-direction: column;
-    justify-content: inherit;
+    justify-content: space-around;
   }
   @media only screen and (min-width: 481px) and (max-width: 768px) {
-    height: 90%;
     flex-direction: column;
     justify-content: space-around;
-    padding: 10px;
   }
 `
 
 const FormContainer = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
 
   @media only screen and (max-width: 480px) {
@@ -103,6 +101,7 @@ const FormContainer = styled.div`
     height: 90%;
   }
   @media only screen and (min-width: 481px) and (max-width: 768px) {
+    flex-direction: column;
     width: 100%;
     height: 90%;
   }
@@ -136,10 +135,10 @@ const RightForm = styled.div`
 `
 
 const ContactContainer = styled.div`
-  width: 50%;
+  width: 40%;
 
   @media only screen and (max-width: 480px) {
-    width: 90%;
+    width: 70%;
   }
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     width: 80%;
@@ -148,7 +147,7 @@ const ContactContainer = styled.div`
 
 const ContactItem = styled.div`
   display: flex;
-  margin: 0 0 30px 80px;
+  margin: 30px 0 0 30px;
 
   @media only screen and (max-width: 480px) {
     margin: 10px 0;

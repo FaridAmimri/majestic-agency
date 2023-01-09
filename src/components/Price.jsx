@@ -5,7 +5,7 @@ import PriceCard from './PriceCard'
 
 function Price() {
   return (
-    <Container>
+    <Container id='price'>
       <PriceCard price='14' type='FORMULE BASIC' total='67,20'>
         <Item>Domiciliation </Item>
         <Item>Mise à disposition du courrier</Item>

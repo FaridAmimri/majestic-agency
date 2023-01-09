@@ -19,16 +19,20 @@ function Navbar() {
       <Wrapper>
         <Left>
           <LogoContainer>
-            {/* <Title>Majestic</Title>
-            <Subtitle>Domiciliation</Subtitle> */}
             <Logo src={LogoIcon}></Logo>
           </LogoContainer>
         </Left>
         <Center>
           <Menu>
-            <MenuItem>Nos services</MenuItem>
-            <MenuItem>Nos guides</MenuItem>
-            <MenuItem>Nos offres</MenuItem>
+            <MenuItem>
+              <a href='#feature'>Nos guides</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='#service'>Nos services</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='#price'>Nos formules</a>
+            </MenuItem>
           </Menu>
         </Center>
         <Right>
@@ -67,18 +71,6 @@ const LogoContainer = styled.div`
   flex-direction: column;
 `
 
-// const Title = styled.h2`
-//   width: 100px;
-//   text-align: center;
-// `
-
-// const Subtitle = styled.h6`
-//   width: 100px;
-//   text-align: center;
-//   font-size: 10px;
-//   color: gray;
-// `
-
 const Logo = styled.img`
   height: 50px;
 `
@@ -106,6 +98,12 @@ const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
   color: grey;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
 
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;

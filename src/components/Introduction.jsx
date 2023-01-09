@@ -17,7 +17,7 @@ function Introduction() {
         </Description>
         <Information>
           <Button variant='contained' size='medium'>
-            Domicilier mon entreprise
+            <a href='#contact'> Domicilier mon entreprise</a>
           </Button>
           <Contact>
             <ContactPhone>
@@ -101,6 +101,12 @@ const Information = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
 
   @media only screen and (max-width: 480px) {
     width: 100%;
