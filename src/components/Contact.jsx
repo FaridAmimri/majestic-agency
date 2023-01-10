@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 import Box from '@mui/material/Box'
-import TextField from '@mui/material/TextField'
+import Input from './Input'
 import Button from '@mui/material/Button'
 import MapIcon from '../assets/map.png'
 import PhoneIcon from '../assets/phone.png'
@@ -11,30 +11,72 @@ import TimeIcon from '../assets/time.png'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import { useState } from 'react'
+import CircularProgress from '@mui/material/CircularProgress'
+
+const initialValues = {
+  name: '',
+  subject: '',
+  email: '',
+  message: ''
+}
 
 function Contact() {
   const formRef = useRef()
-  const [done, setDone] = useState(false)
+
+  const [values, setValues] = useState(initialValues)
+  const [errors, setErrors] = useState({})
+  const [success, setSuccess] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setValues({
+      ...values,
+      [name]: value
+    })
+  }
+
+  const validate = () => {
+    let temp = {}
+    const regexEmail = /\S+@\S+\.\S+/
+
+    temp.name = values.name ? '' : 'Entrer un nom'
+    temp.subject = values.subject ? '' : 'Entrer un sujet'
+    temp.email = regexEmail.test(values.email) ? '' : 'Entrer un email correct'
+    temp.message = values.message ? '' : 'Entrer un message'
+    setErrors({ ...temp })
+    return Object.values(temp).every((x) => x === '')
+  }
+
+  const resetForm = () => {
+    setValues(initialValues)
+    setErrors({})
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Submit')
-    emailjs
-      .sendForm(
-        'service_vjipffb',
-        'template_rlelajz',
-        formRef.current,
-        'dxK4eOAw61JXwWe-i'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-          setDone(true)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
+
+    if (validate()) {
+      setLoading(true)
+      emailjs
+        .sendForm(
+          'service_vjipffb',
+          'template_rlelajz',
+          formRef.current,
+          'dxK4eOAw61JXwWe-i'
+        )
+        .then(
+          (result) => {
+            console.log(result.text)
+            resetForm()
+            setLoading(false)
+            setSuccess(true)
+          },
+          (error) => {
+            console.log(error.text)
+          }
+        )
+    }
   }
 
   return (
@@ -52,12 +94,38 @@ function Contact() {
           <Title>Entrons en contact</Title>
           <FormContainer>
             <LeftForm>
-              <TextField label='Nom' name='user_name' />
-              <TextField label='Sujet' name='user_subject' />
-              <TextField label='Email' name='user_email' />
+              <Input
+                label='Nom'
+                name='name'
+                value={values.name}
+                error={errors.name}
+                onChange={handleInputChange}
+              />
+              <Input
+                label='Sujet'
+                name='subject'
+                value={values.subject}
+                error={errors.subject}
+                onChange={handleInputChange}
+              />
+              <Input
+                label='Email'
+                name='email'
+                value={values.email}
+                error={errors.email}
+                onChange={handleInputChange}
+              />
             </LeftForm>
             <RightForm>
-              <TextField label='Message' name='message' multiline rows={5} />
+              <Input
+                label='Message'
+                name='message'
+                multiline
+                rows={5}
+                value={values.message}
+                error={errors.message}
+                onChange={handleInputChange}
+              />
               <Button
                 variant='contained'
                 sx={{ margin: '8px' }}
@@ -68,7 +136,12 @@ function Contact() {
               </Button>
             </RightForm>
           </FormContainer>
-          {done && (
+          {loading && (
+            <LoaderContainer>
+              <CircularProgress color='success' />
+            </LoaderContainer>
+          )}
+          {success && (
             <Notification>Votre message a bien été envoyé.</Notification>
           )}
         </Box>
@@ -88,7 +161,7 @@ function Contact() {
           </ContactItem>
           <ContactItem>
             <Icon src={TimeIcon} />
-            <Text>De 9h à 12h et de 13h à 18h</Text>
+            <Text>Ouvert de 9h à 12h et de 13h à 18h</Text>
           </ContactItem>
         </ContactContainer>
       </Wrapper>
@@ -172,6 +245,12 @@ const RightForm = styled.div`
   @media only screen and (max-width: 480px) {
     justify-content: inherit;
   }
+`
+
+const LoaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `
 
 const Notification = styled.p`
