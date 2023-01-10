@@ -38,7 +38,7 @@ function PriceCard({ price, type, total, children }) {
       <CardActions>
         <Action>
           <Button variant='outlined' size='small'>
-            Join Now
+            <a href='#contact'> Je souscris</a>
           </Button>
         </Action>
       </CardActions>
@@ -83,4 +83,11 @@ const Extra = styled.p`
 
 const Action = styled.div`
   margin-bottom: 20px;
+
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
 `

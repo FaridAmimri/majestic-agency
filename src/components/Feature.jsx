@@ -27,7 +27,7 @@ function Feature() {
           de souplesse dans le dimensionnement de votre entreprise.
         </Description>
         <Button variant='contained' size='large' sx={{ width: '200px' }}>
-          En savoir plus
+          <a href='#contact'>En savoir plus</a>
         </Button>
       </Right>
       <Animation />
@@ -71,6 +71,12 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 40px;
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
 
   @media only screen and (max-width: 480px) {
     width: 100%;
