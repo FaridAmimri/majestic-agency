@@ -8,8 +8,35 @@ import MapIcon from '../assets/map.png'
 import PhoneIcon from '../assets/phone.png'
 import SendIcon from '../assets/send.png'
 import TimeIcon from '../assets/time.png'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
+import { useState } from 'react'
 
 function Contact() {
+  const formRef = useRef()
+  const [done, setDone] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Submit')
+    emailjs
+      .sendForm(
+        'service_vjipffb',
+        'template_rlelajz',
+        formRef.current,
+        'dxK4eOAw61JXwWe-i'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+          setDone(true)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+  }
+
   return (
     <Container id='contact'>
       <Wrapper>
@@ -20,21 +47,30 @@ function Contact() {
           }}
           noValidate
           autoComplete='off'
+          ref={formRef}
         >
           <Title>Entrons en contact</Title>
           <FormContainer>
             <LeftForm>
-              <TextField label='Your Name' />
-              <TextField label='Your Email' />
-              <TextField label='Subject' />
+              <TextField label='Nom' name='user_name' />
+              <TextField label='Sujet' name='user_subject' />
+              <TextField label='Email' name='user_email' />
             </LeftForm>
             <RightForm>
-              <TextField label='Your Message' multiline rows={5} />
-              <Button variant='contained' sx={{ margin: '8px' }}>
+              <TextField label='Message' name='message' multiline rows={5} />
+              <Button
+                variant='contained'
+                sx={{ margin: '8px' }}
+                onClick={handleSubmit}
+                color='success'
+              >
                 Envoyer
               </Button>
             </RightForm>
           </FormContainer>
+          {done && (
+            <Notification>Votre message a bien été envoyé.</Notification>
+          )}
         </Box>
 
         <ContactContainer>
@@ -132,6 +168,20 @@ const RightForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: 480px) {
+    justify-content: inherit;
+  }
+`
+
+const Notification = styled.p`
+  margin: 10px;
+  color: #2e7d32;
+
+  @media only screen and (max-width: 480px) {
+    margin: 0;
+    text-align: center;
+  }
 `
 
 const ContactContainer = styled.div`
