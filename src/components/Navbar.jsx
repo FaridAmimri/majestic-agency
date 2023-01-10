@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import LogoIcon from '../assets/logo.png'
+import LogoIcon from '../assets/logoicon.png'
 
 function Navbar() {
   const theme = createTheme({
@@ -19,19 +19,23 @@ function Navbar() {
       <Wrapper>
         <Left>
           <LogoContainer>
-            <Logo src={LogoIcon}></Logo>
+            <LogoImg src={LogoIcon}></LogoImg>
+            <LogoContent>
+              <LogoTitle>Majestic</LogoTitle>
+              <LogoSubTitle>Domiciliation</LogoSubTitle>
+            </LogoContent>
           </LogoContainer>
         </Left>
         <Center>
           <Menu>
             <MenuItem>
-              <a href='#feature'>Nos guides</a>
+              <a href='#feature'>Guide</a>
             </MenuItem>
             <MenuItem>
-              <a href='#service'>Nos services</a>
+              <a href='#service'>Services</a>
             </MenuItem>
             <MenuItem>
-              <a href='#price'>Nos formules</a>
+              <a href='#price'>Formules</a>
             </MenuItem>
           </Menu>
         </Center>
@@ -68,11 +72,24 @@ const Left = styled.div`
 const LogoContainer = styled.div`
   width: 100px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 `
 
-const Logo = styled.img`
-  height: 50px;
+const LogoImg = styled.img`
+  height: 30px;
+  width: 30px;
+`
+
+const LogoContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 2px;
+`
+
+const LogoTitle = styled.h3``
+
+const LogoSubTitle = styled.h6`
+  padding-left: 3px;
 `
 
 const Center = styled.div`
