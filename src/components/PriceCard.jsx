@@ -83,11 +83,4 @@ const Extra = styled.p`
 
 const Action = styled.div`
   margin-bottom: 20px;
-
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    color: inherit;
-  }
 `

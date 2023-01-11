@@ -45,6 +45,13 @@ const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+  a:link {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
 `
 
 const Shape = css`

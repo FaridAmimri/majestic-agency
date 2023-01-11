@@ -71,12 +71,6 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 40px;
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    color: inherit;
-  }
 
   @media only screen and (max-width: 480px) {
     width: 100%;

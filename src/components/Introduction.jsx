@@ -101,12 +101,6 @@ const Information = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    color: inherit;
-  }
 
   @media only screen and (max-width: 480px) {
     width: 100%;

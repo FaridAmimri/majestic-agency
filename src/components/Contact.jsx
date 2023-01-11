@@ -289,7 +289,7 @@ const ContactItem = styled.div`
 const Icon = styled.img`
   width: 25px;
   height: 25px;
-  margin-right: 20px;
+  margin-right: 10px;
 
   @media only screen and (max-width: 480px) {
     width: 20px;

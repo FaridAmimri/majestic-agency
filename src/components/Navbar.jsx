@@ -115,12 +115,6 @@ const MenuItem = styled.li`
   font-size: 20px;
   font-weight: bold;
   color: grey;
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    color: inherit;
-  }
 
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
