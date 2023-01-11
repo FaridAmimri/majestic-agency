@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/github.io/majestic-agency/static/js/main.5c941850.js",
-    "static/media/intro.png": "/github.io/majestic-agency/static/media/intro.1b7b11a77653ecb8bfe1.png",
-    "static/media/feature.png": "/github.io/majestic-agency/static/media/feature.75318e253357c517f66b.png",
-    "static/media/service.png": "/github.io/majestic-agency/static/media/service.003a3910f7d03e1c8234.png",
-    "static/media/boost.png": "/github.io/majestic-agency/static/media/boost.d8ca83b6e70378da4dc5.png",
-    "static/media/support.png": "/github.io/majestic-agency/static/media/support.553a47f90a7d0c808062.png",
-    "static/media/juriste.png": "/github.io/majestic-agency/static/media/juriste.c781bc84511004a53d27.png",
-    "static/media/facebook.png": "/github.io/majestic-agency/static/media/facebook.c0b2db0d6a013da0feed.png",
-    "static/media/time.png": "/github.io/majestic-agency/static/media/time.4473a49efdff1bceb999.png",
-    "index.html": "/github.io/majestic-agency/index.html",
-    "main.5c941850.js.map": "/github.io/majestic-agency/static/js/main.5c941850.js.map"
+    "main.js": "/majestic-agency/static/js/main.bb14c155.js",
+    "static/media/intro.png": "/majestic-agency/static/media/intro.1b7b11a77653ecb8bfe1.png",
+    "static/media/feature.png": "/majestic-agency/static/media/feature.75318e253357c517f66b.png",
+    "static/media/service.png": "/majestic-agency/static/media/service.003a3910f7d03e1c8234.png",
+    "static/media/boost.png": "/majestic-agency/static/media/boost.d8ca83b6e70378da4dc5.png",
+    "static/media/support.png": "/majestic-agency/static/media/support.553a47f90a7d0c808062.png",
+    "static/media/juriste.png": "/majestic-agency/static/media/juriste.c781bc84511004a53d27.png",
+    "static/media/facebook.png": "/majestic-agency/static/media/facebook.c0b2db0d6a013da0feed.png",
+    "static/media/time.png": "/majestic-agency/static/media/time.4473a49efdff1bceb999.png",
+    "index.html": "/majestic-agency/index.html",
+    "main.bb14c155.js.map": "/majestic-agency/static/js/main.bb14c155.js.map"
   },
   "entrypoints": [
-    "static/js/main.5c941850.js"
+    "static/js/main.bb14c155.js"
   ]
 }
