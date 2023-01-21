@@ -3,7 +3,8 @@
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import LogoIcon from '../assets/logoicon.png'
+import LogoIcon from '../assets/logo.png'
+import MarianneIcon from '../assets/marianne.png'
 
 function Navbar() {
   const theme = createTheme({
@@ -16,26 +17,20 @@ function Navbar() {
 
   return (
     <Container>
+      <LogoContainer>
+        <LogoImg src={LogoIcon} alt='Logo Majestic Domiciliation'></LogoImg>
+      </LogoContainer>
       <Wrapper>
-        <Left>
-          <LogoContainer>
-            <LogoImg src={LogoIcon}></LogoImg>
-            <LogoContent>
-              <LogoTitle>Majestic</LogoTitle>
-              <LogoSubTitle>Domiciliation</LogoSubTitle>
-            </LogoContent>
-          </LogoContainer>
-        </Left>
         <Center>
           <Menu>
             <MenuItem>
-              <a href='#feature'>Guide</a>
+              <a href='#feature'>Services</a>
             </MenuItem>
             <MenuItem>
-              <a href='#service'>Services</a>
+              <a href='#service'>Pour Qui ?</a>
             </MenuItem>
             <MenuItem>
-              <a href='#price'>Formules</a>
+              <a href='#price'>Nos solutions</a>
             </MenuItem>
           </Menu>
         </Center>
@@ -45,6 +40,7 @@ function Navbar() {
               Agrément n° 59-2022-15
             </Button>
           </ThemeProvider>
+          <MarianneImg src={MarianneIcon}></MarianneImg>
         </Right>
       </Wrapper>
     </Container>
@@ -54,42 +50,24 @@ function Navbar() {
 export default Navbar
 
 const Container = styled.div`
-  height: 50px;
-`
-
-const Wrapper = styled.div`
-  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
-`
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 `
 
 const LogoContainer = styled.div`
-  width: 100px;
-  display: flex;
-  align-items: center;
+  flex: 1;
 `
 
 const LogoImg = styled.img`
-  height: 30px;
-  width: 30px;
+  padding: 20px 0 0 20px;
+  width: 25%;
 `
 
-const LogoContent = styled.div`
+const Wrapper = styled.div`
+  flex: 4;
+  height: 50px;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
-  padding-left: 2px;
-`
-
-const LogoTitle = styled.h3``
-
-const LogoSubTitle = styled.h6`
-  padding-left: 3px;
+  justify-content: space-between;
 `
 
 const Center = styled.div`
@@ -126,4 +104,8 @@ const Right = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+`
+
+const MarianneImg = styled.img`
+  width: 20%;
 `
