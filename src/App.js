@@ -8,6 +8,7 @@ import Service from './components/Service'
 import Price from './components/Price'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import IntroIcon from './assets/intro.jpg'
 
 function App() {
   const smallScreen = window.screen.width <= 480 ? true : false
@@ -17,7 +18,9 @@ function App() {
       <Container>
         <Navbar />
         <Introduction />
-        <IntroductionShape />
+        <IntroductionShape>
+          <IntroductionImage src={IntroIcon} />
+        </IntroductionShape>
       </Container>
       <Container>
         <Feature />
@@ -65,13 +68,19 @@ const Shape = css`
 
 const IntroductionShape = styled.div`
   ${Shape}
-  clip-path: polygon(67% 0%, 100% 0%, 100% 100%, 50% 100%);
-  background-color: crimson;
+  clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 45% 100%);
+`
+
+const IntroductionImage = styled.img`
+  position: absolute;
+  object-fit: cover;
+  width: 56%;
+  right: -1vw;
 `
 
 const FeatureShape = styled.div`
   ${Shape}
-  clip-path: polygon(0 0, 50% 0%, 33% 100%, 0 100%);
+  clip-path: polygon(0 0, 45% 0%, 33% 100%, 0 100%);
   background-color: pink;
 `
 
