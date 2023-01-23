@@ -2,20 +2,40 @@
 
 import styled from 'styled-components'
 import FacebookIcon from '../assets/facebook.png'
+import InstaIcon from '../assets/instagram.png'
+import TiktokIcon from '../assets/tiktok.png'
+import LinkedinIcon from '../assets/linkedin.png'
 
 function Footer() {
   return (
     <Container>
-      <Copyright>Retrouvez-nous sur Facebook</Copyright>
-
+      <Copyright>Retrouvez-nous sur</Copyright>
       <SocialMedia>
         <a
           href='https://www.facebook.com/profile.php?id=100088925397727'
           target='blank'
         >
           <SocialIcon src={FacebookIcon} />
-          <SocialText>Majestic Dom</SocialText>
         </a>
+        <a
+          href='https://www.facebook.com/profile.php?id=100088925397727'
+          target='blank'
+        >
+          <SocialIcon src={InstaIcon} />
+        </a>
+        <a
+          href='https://www.facebook.com/profile.php?id=100088925397727'
+          target='blank'
+        >
+          <SocialIcon src={TiktokIcon} />
+        </a>
+        <a
+          href='https://www.facebook.com/profile.php?id=100088925397727'
+          target='blank'
+        >
+          <SocialIcon src={LinkedinIcon} />
+        </a>
+        <SocialText>Majestic Dom</SocialText>
       </SocialMedia>
     </Container>
   )
@@ -35,7 +55,8 @@ const Container = styled.div`
 const Copyright = styled.span``
 
 const SocialMedia = styled.div`
-  padding-left: 10px;
+  display: flex;
+  align-items: center;
   a {
     text-decoration-line: none;
     color: inherit;
@@ -48,8 +69,9 @@ const SocialMedia = styled.div`
 const SocialIcon = styled.img`
   width: 25px;
   height: 25px;
+  padding-left: 8px;
 `
 
 const SocialText = styled.span`
-  padding-left: 5px;
+  padding-left: 8px;
 `
