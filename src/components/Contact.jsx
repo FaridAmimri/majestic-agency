@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 import MapIcon from '../assets/map.png'
 import PhoneIcon from '../assets/phone.png'
 import SendIcon from '../assets/send.png'
-import TimeIcon from '../assets/time.png'
+import ClockIcon from '../assets/clock.png'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import { useState } from 'react'
@@ -160,7 +160,7 @@ function Contact() {
             <Text>contact@majesticdom.fr</Text>
           </ContactItem>
           <ContactItem>
-            <Icon src={TimeIcon} />
+            <Icon src={ClockIcon} />
             <Text>Ouvert de 9h à 12h et de 13h à 18h</Text>
           </ContactItem>
         </ContactContainer>
@@ -173,7 +173,7 @@ export default Contact
 
 const Container = styled.div`
   height: 90%;
-  background-color: #d32f2f0a;
+  background-color: #d32f2f17;
   padding-left: 40px;
 
   @media only screen and (max-width: 480px) {

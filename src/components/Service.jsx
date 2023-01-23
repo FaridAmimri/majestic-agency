@@ -47,6 +47,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 
   @media only screen and (max-width: 480px) {
     padding: 20px;
@@ -86,7 +87,6 @@ const Card = styled.div`
 const TitleContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 `
 
 const Icon = styled.img`

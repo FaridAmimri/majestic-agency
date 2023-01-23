@@ -50,7 +50,7 @@ function Feature() {
             </Description>
           </Item>
         </Advantage>
-        <Button variant='contained' size='large' sx={{ width: '200px' }}>
+        <Button variant='contained' size='medium' sx={{ width: '200px' }}>
           <a href='#contact'>En savoir plus</a>
         </Button>
       </Right>
@@ -110,7 +110,7 @@ const Right = styled.div`
 `
 
 const Title = styled.span`
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 30px;
 
   @media only screen and (max-width: 480px) {
@@ -138,7 +138,7 @@ const Item = styled.div`
 `
 
 const SubTitle = styled.span`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
