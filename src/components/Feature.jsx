@@ -64,24 +64,17 @@ export default Feature
 const Container = styled.div`
   display: flex;
   align-items: center;
-  height: 100%;
-
-  @media only screen and (max-width: 480px) {
-    padding: 30px;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    padding: 10px;
-  }
+  min-height: 100vh;
 `
 
 const Left = styled.div`
   width: 50%;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     display: none;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    width: 30%;
+  @media only screen and (max-width: 480px) {
+    display: none;
   }
 `
 
@@ -90,6 +83,13 @@ const Image = styled.img`
   position: absolute;
   left: -1vw;
   top: 6vh;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    display: none;
+  }
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const Right = styled.div`
@@ -99,13 +99,17 @@ const Right = styled.div`
   justify-content: center;
   padding: 0 40px;
 
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    width: 100%;
+    height: 85vh;
+    justify-content: space-between;
+    padding: 20px;
+  }
   @media only screen and (max-width: 480px) {
     width: 100%;
-    padding: 0;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    width: 70%;
-    padding: 0 10px;
+    height: 85vh;
+    justify-content: space-between;
+    padding: 20px;
   }
 `
 
@@ -113,17 +117,26 @@ const Title = styled.span`
   font-size: 25px;
   margin-bottom: 30px;
 
-  @media only screen and (max-width: 480px) {
-    font-size: 26px;
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 23px;
+    margin-bottom: 25px;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    font-size: 28px;
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+    margin: 0;
   }
 `
 
 const Advantage = styled.div`
   display: flex;
   margin-bottom: 20px;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin: 0;
+  }
 `
 
 const Picto = styled.img`
@@ -143,9 +156,13 @@ const SubTitle = styled.span`
   color: #333;
   margin-bottom: 10px;
 
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    font-size: 22px;
-    margin: 20px 0;
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 19px;
+    margin-bottom: 10px;
   }
 `
 
@@ -154,7 +171,12 @@ const Description = styled.span`
   font-style: italic;
   color: #777;
 
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 19px;
     margin-bottom: 15px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 `

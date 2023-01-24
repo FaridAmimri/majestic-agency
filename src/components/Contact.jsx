@@ -60,8 +60,8 @@ function Contact() {
       setLoading(true)
       emailjs
         .sendForm(
-          'service_vjipffb',
-          'template_rlelajz',
+          'service_5ubwg4q',
+          'template_qdtmkgw',
           formRef.current,
           'dxK4eOAw61JXwWe-i'
         )
@@ -172,29 +172,33 @@ function Contact() {
 export default Contact
 
 const Container = styled.div`
-  height: 90%;
+  min-height: 90vh;
   background-color: #d32f2f17;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding-left: 40px;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     padding: 0;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     padding: 0;
   }
 `
 
 const Wrapper = styled.div`
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     flex-direction: column;
     justify-content: space-around;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     flex-direction: column;
     justify-content: space-around;
   }
@@ -204,12 +208,12 @@ const FormContainer = styled.div`
   width: 60%;
   display: flex;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     flex-direction: column;
     width: 100%;
     height: 90%;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     flex-direction: column;
     width: 100%;
     height: 90%;
@@ -266,11 +270,13 @@ const Notification = styled.p`
 const ContactContainer = styled.div`
   width: 40%;
 
-  @media only screen and (max-width: 480px) {
-    width: 70%;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     width: 80%;
+    margin: 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 90%;
+    margin: 10px;
   }
 `
 
@@ -278,11 +284,11 @@ const ContactItem = styled.div`
   display: flex;
   margin: 30px 0 0 30px;
 
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    margin: 8px 0;
+  }
   @media only screen and (max-width: 480px) {
     margin: 10px 0;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    margin: 8px 0;
   }
 `
 

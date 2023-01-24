@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 import IntroIcon from './assets/intro.jpg'
 
 function App() {
-  const smallScreen = window.screen.width <= 480 ? true : false
+  // const smallScreen = window.screen.width <= 480 ? true : false
 
   return (
     <>
@@ -28,7 +28,7 @@ function App() {
       </Container>
       <Container>
         <Service />
-        {!smallScreen && <ServiceShape />}
+        <ServiceShape />
       </Container>
       <Container>
         <Price />
@@ -45,7 +45,7 @@ function App() {
 export default App
 
 const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   a:link {
@@ -69,6 +69,13 @@ const Shape = css`
 const IntroductionShape = styled.div`
   ${Shape}
   clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 45% 100%);
+
+  @media only screen and (max-width: 480px) {
+    background-color: crimson;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    background-color: crimson;
+  }
 `
 
 const IntroductionImage = styled.img`
@@ -76,6 +83,13 @@ const IntroductionImage = styled.img`
   object-fit: cover;
   width: 56%;
   right: -1vw;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    display: none;
+  }
 `
 
 const FeatureShape = styled.div`

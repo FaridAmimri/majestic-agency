@@ -35,7 +35,6 @@ function Footer() {
         >
           <SocialIcon src={LinkedinIcon} />
         </a>
-        <SocialText>Majestic Dom</SocialText>
       </SocialMedia>
     </Container>
   )
@@ -44,7 +43,7 @@ function Footer() {
 export default Footer
 
 const Container = styled.div`
-  height: 10%;
+  min-height: 10vh;
   background-color: #111;
   color: lightgray;
   display: flex;
@@ -69,9 +68,5 @@ const SocialMedia = styled.div`
 const SocialIcon = styled.img`
   width: 25px;
   height: 25px;
-  padding-left: 8px;
-`
-
-const SocialText = styled.span`
   padding-left: 8px;
 `

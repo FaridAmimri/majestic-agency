@@ -35,11 +35,13 @@ function Navbar() {
           </Menu>
         </Center>
         <Right>
-          <ThemeProvider theme={theme}>
-            <Button variant='outlined' size='small'>
-              Agrément n° 59-2022-15
-            </Button>
-          </ThemeProvider>
+          <AgreementContainer>
+            <ThemeProvider theme={theme}>
+              <Button variant='outlined' size='small'>
+                Agrément n°59-2022-15
+              </Button>
+            </ThemeProvider>
+          </AgreementContainer>
           <MarianneImg src={MarianneIcon}></MarianneImg>
         </Right>
       </Wrapper>
@@ -60,6 +62,13 @@ const LogoContainer = styled.div`
 const LogoImg = styled.img`
   padding: 20px 0 0 20px;
   width: 25%;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
 `
 
 const Wrapper = styled.div`
@@ -68,22 +77,34 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `
 
 const Center = styled.div`
   flex: 2;
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    flex: 3;
+    justify-content: center;
+  }
 `
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
 
-  @media only screen and (max-width: 480px) {
-    display: none;
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    padding: 0;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     padding: 0;
   }
 `
@@ -94,7 +115,12 @@ const MenuItem = styled.li`
   font-weight: bold;
   color: grey;
 
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    margin-right: 16px;
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-right: 14px;
     font-size: 15px;
   }
 `
@@ -106,6 +132,22 @@ const Right = styled.div`
   align-items: center;
 `
 
+const AgreementContainer = styled.div`
+  width: 105px;
+  margin-right: 10px;
+
+  @media only screen and (max-width: 480px) {
+    margin-top: 10px;
+  }
+`
+
 const MarianneImg = styled.img`
   width: 20%;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    display: none;
+  }
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `

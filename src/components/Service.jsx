@@ -49,18 +49,25 @@ const Container = styled.div`
   justify-content: center;
   padding: 20px;
 
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    padding: 10px;
+  }
   @media only screen and (max-width: 480px) {
     padding: 20px;
-    height: 100%;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    padding: 10px;
-    height: 100%;
   }
 `
 
 const Header = styled.h1`
   text-align: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+    margin: 15px 0;
+  }
 `
 
 const Wrapper = styled.div`
@@ -68,11 +75,13 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    width: 100%;
+    flex-direction: column;
+  }
   @media only screen and (max-width: 480px) {
     width: 100%;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    width: 70%;
+    flex-direction: column;
   }
 `
 
@@ -80,8 +89,16 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 470px;
   padding: 25px;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    height: auto;
+    padding-bottom: 0;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding-bottom: 0;
+  }
 `
 
 const TitleContainer = styled.div`
@@ -102,7 +119,7 @@ const Item = styled.div`
   flex-direction: column;
   margin-bottom: 10px;
 
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     margin-bottom: 20px;
   }
 `

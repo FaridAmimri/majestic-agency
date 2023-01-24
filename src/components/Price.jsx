@@ -44,9 +44,17 @@ const Container = styled.div`
 const Header = styled.div`
   display: flex;
   align-items: center;
+  margin: 20px;
 `
 
-const Title = styled.h2``
+const Title = styled.h2`
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 22px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 20px;
+  }
+`
 
 const Icon = styled.img`
   width: 100px;
@@ -59,14 +67,24 @@ const CardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
   @media only screen and (max-width: 480px) {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 `
 
 const Item = styled.li`
   margin: 10px 0;
   font-size: 18px;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    font-size: 17px;
+  }
   @media only screen and (max-width: 480px) {
     font-size: 15px;
   }

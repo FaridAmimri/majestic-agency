@@ -61,7 +61,7 @@ const Price = styled.span`
   @media only screen and (max-width: 480px) {
     font-size: 30px;
   }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
     font-size: 35px;
   }
 `
