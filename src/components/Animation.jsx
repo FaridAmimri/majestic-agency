@@ -17,7 +17,7 @@ export default Animation
 const Square = styled.div`
   width: 60px;
   height: 60px;
-  background-color: #4e6bff;
+  background-color: #213a8f;
   opacity: 0.7;
   position: absolute;
   top: -60px;
@@ -36,7 +36,7 @@ const Circle = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ffa500b5;
+  background-color: #ff9124;
   position: absolute;
   top: 200px;
   left: -100px;

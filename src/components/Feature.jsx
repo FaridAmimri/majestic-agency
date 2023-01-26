@@ -16,7 +16,7 @@ function Feature() {
       </Left>
       <Right>
         <Title>
-          <b>Gagnez</b> du temps grâce à notre domiciliation nouvelle génération
+          <b>Gagnez du temps</b> grâce à notre domiciliation nouvelle génération
           et ses avantages exclusifs
         </Title>
         <Advantage>
@@ -36,14 +36,14 @@ function Feature() {
             <SubTitle>Finissez-en avec la paperasse</SubTitle>
             <Description>
               Grâce à la numérisation et au stockage dropbox, ayez accès à tous
-              vos courrier, sans vous déplacer et sans le papier.
+              vos courriers, sans vous déplacer et sans le papier.
             </Description>
           </Item>
         </Advantage>
         <Advantage>
           <Picto src={DiscreetIcon} alt='Avatar discret' />
           <Item>
-            <SubTitle>Protégez votre vie privé</SubTitle>
+            <SubTitle>Protégez votre vie privée</SubTitle>
             <Description>
               Posséder une adresse de domiciliation, c'est aussi une vraie
               sécurité à apporter à votre foyer.
@@ -79,9 +79,9 @@ const Left = styled.div`
 `
 
 const Image = styled.img`
-  width: 40%;
+  width: 35%;
   position: absolute;
-  left: -1vw;
+  left: 0vw;
   top: 6vh;
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {

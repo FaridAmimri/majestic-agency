@@ -8,23 +8,43 @@ function Price() {
   return (
     <Container id='price'>
       <Header>
-        <Icon src={FormulaIcon} alt='Icône formule' />
-        <Title>
-          Formules : Un devis personnalisé en 1h adapté à VOS besoins et VOTRE
-          situation
-        </Title>
+        <Title>Formules:</Title>
       </Header>
 
       <CardContainer>
-        <PriceCard price='14' type='FORMULE BASIC' total='67,20'>
-          <Item>Domiciliation </Item>
+        <PriceCard
+          price='14'
+          period='€/mois'
+          type='FORMULE BASIC'
+          total='67,20 € TTC'
+          action='Je souscris'
+        >
+          <Item>Domiciliation</Item>
           <Item>Mise à disposition du courrier</Item>
         </PriceCard>
 
-        <PriceCard price='23' type='FORMULE PREMIUM' total='110,40'>
-          <Item>Domiciliation </Item>
+        <PriceCard
+          price='23'
+          period='€/mois'
+          type='FORMULE PREMIUM'
+          total='110,40 € TTC'
+          action='Je souscris'
+        >
+          <Item>Domiciliation</Item>
           <Item>Réexpédition du courrier</Item>
           <Item>Envoi numérique quotidien</Item>
+        </PriceCard>
+
+        <PriceCard
+          icon={FormulaIcon}
+          image='true'
+          type='DEVIS PERSONNALISÉ'
+          total='Gratuit'
+          action='Demander un devis'
+        >
+          <Item>Un devis personnalisé en 1h</Item>
+          <Item>Adapté à VOS besoins et VOTRE situation </Item>
+          <Item>Servie à la demande</Item>
         </PriceCard>
       </CardContainer>
     </Container>
@@ -39,6 +59,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 `
 
 const Header = styled.div`
@@ -54,11 +75,6 @@ const Title = styled.h2`
   @media only screen and (max-width: 480px) {
     font-size: 20px;
   }
-`
-
-const Icon = styled.img`
-  width: 100px;
-  height: 100px;
 `
 
 const CardContainer = styled.div`

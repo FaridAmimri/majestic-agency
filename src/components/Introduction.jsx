@@ -8,7 +8,7 @@ function Introduction() {
     <Container>
       <Left>
         <Title>La solution qui change la vie</Title>
-        <Description>Vous en avez rêvé, on l'a fait</Description>
+        <Description>Vous en avez rêvé, on l'a fait.</Description>
       </Left>
       <Animation />
     </Container>
@@ -61,9 +61,10 @@ const Title = styled.h1`
 
 const Description = styled.p`
   width: 60%;
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 20px;
   font-weight: 500;
+  color: #ff9124;
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     width: 100%;

@@ -113,7 +113,6 @@ const MenuItem = styled.li`
   margin-right: 30px;
   font-size: 20px;
   font-weight: bold;
-  color: grey;
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     margin-right: 16px;
@@ -133,7 +132,7 @@ const Right = styled.div`
 `
 
 const AgreementContainer = styled.div`
-  width: 105px;
+  width: 120px;
   margin-right: 10px;
 
   @media only screen and (max-width: 480px) {

@@ -7,12 +7,21 @@ import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-function PriceCard({ price, type, total, children }) {
+function PriceCard({
+  price,
+  period,
+  icon,
+  type,
+  total,
+  action,
+  image = false,
+  children
+}) {
   return (
     <Card
       sx={{
         maxWidth: 300,
-        maxHeight: 380,
+        minHeight: 420,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -24,7 +33,9 @@ function PriceCard({ price, type, total, children }) {
       <CardContent>
         <Typography gutterBottom variant='h5' component='div'>
           <PriceContainer>
-            <Price>{price}</Price>€/mois
+            <Price>{price}</Price>
+            {period}
+            {image && <Icon src={icon} />}
           </PriceContainer>
           <PlanType>
             <Button variant='outlined' size='small' color='error'>
@@ -33,12 +44,12 @@ function PriceCard({ price, type, total, children }) {
           </PlanType>
           <List>{children}</List>
         </Typography>
-        <Extra>Somme à verser à la signature : {total} € TTC</Extra>
+        <Extra>Somme à verser à la signature : {total}</Extra>
       </CardContent>
       <CardActions>
         <Action>
           <Button variant='outlined' size='small'>
-            <a href='#contact'> Je souscris</a>
+            <a href='#contact'>{action}</a>
           </Button>
         </Action>
       </CardActions>
@@ -66,6 +77,11 @@ const Price = styled.span`
   }
 `
 
+const Icon = styled.img`
+  width: 100px;
+  height: 100px;
+`
+
 const PlanType = styled.div`
   display: flex;
   justify-content: center;
@@ -79,6 +95,7 @@ const Extra = styled.p`
   margin-top: 20px;
   font-size: 13px;
   font-weight: bold;
+  text-align: center;
 `
 
 const Action = styled.div`

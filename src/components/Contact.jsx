@@ -127,10 +127,9 @@ function Contact() {
                 onChange={handleInputChange}
               />
               <Button
-                variant='contained'
+                variant='outlined'
                 sx={{ margin: '8px' }}
                 onClick={handleSubmit}
-                color='success'
               >
                 Envoyer
               </Button>
@@ -138,7 +137,7 @@ function Contact() {
           </FormContainer>
           {loading && (
             <LoaderContainer>
-              <CircularProgress color='success' />
+              <CircularProgress color='primary' />
             </LoaderContainer>
           )}
           {success && (
@@ -173,11 +172,12 @@ export default Contact
 
 const Container = styled.div`
   min-height: 90vh;
-  background-color: #d32f2f17;
+  background-color: #ff912463;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-left: 40px;
+  color: white;
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     padding: 0;
@@ -221,6 +221,7 @@ const FormContainer = styled.div`
 `
 
 const Title = styled.h1`
+  color: #1976d2;
   margin: 10px;
 
   @media only screen and (max-width: 480px) {
@@ -259,7 +260,7 @@ const LoaderContainer = styled.div`
 
 const Notification = styled.p`
   margin: 10px;
-  color: #2e7d32;
+  color: #1976d2;
 
   @media only screen and (max-width: 480px) {
     margin: 0;
@@ -286,9 +287,13 @@ const ContactItem = styled.div`
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     margin: 8px 0;
+    display: flex;
+    justify-content: center;
   }
   @media only screen and (max-width: 480px) {
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
   }
 `
 

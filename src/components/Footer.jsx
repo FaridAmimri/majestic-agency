@@ -18,19 +18,16 @@ function Footer() {
           <SocialIcon src={FacebookIcon} />
         </a>
         <a
-          href='https://www.facebook.com/profile.php?id=100088925397727'
+          href='https://www.instagram.com/majesticdomiciliation/?hl=fr'
           target='blank'
         >
           <SocialIcon src={InstaIcon} />
         </a>
-        <a
-          href='https://www.facebook.com/profile.php?id=100088925397727'
-          target='blank'
-        >
+        <a href='https://www.tiktok.com/@majesticdomdom' target='blank'>
           <SocialIcon src={TiktokIcon} />
         </a>
         <a
-          href='https://www.facebook.com/profile.php?id=100088925397727'
+          href='https://www.linkedin.com/in/majestic-domiciliation-9b54b1262/'
           target='blank'
         >
           <SocialIcon src={LinkedinIcon} />

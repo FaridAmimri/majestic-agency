@@ -28,7 +28,6 @@ function App() {
       </Container>
       <Container>
         <Service />
-        <ServiceShape />
       </Container>
       <Container>
         <Price />
@@ -45,7 +44,7 @@ function App() {
 export default App
 
 const Container = styled.div`
-  min-height: 100vh;
+  height: auto;
   overflow: hidden;
   position: relative;
   a:link {
@@ -71,10 +70,10 @@ const IntroductionShape = styled.div`
   clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 45% 100%);
 
   @media only screen and (max-width: 480px) {
-    background-color: crimson;
+    background-color: #79aac2;
   }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
-    background-color: crimson;
+    background-color: #79aac2;
   }
 `
 
@@ -95,17 +94,17 @@ const IntroductionImage = styled.img`
 const FeatureShape = styled.div`
   ${Shape}
   clip-path: polygon(0 0, 45% 0%, 33% 100%, 0 100%);
-  background-color: pink;
+  background-color: #ff912463;
 `
 
-const ServiceShape = styled.div`
-  ${Shape}
-  clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
-  background-color: #f88497;
-`
+// const ServiceShape = styled.div`
+//   ${Shape}
+//   clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
+//   background-color: #f88497;
+// `
 
 const PriceShape = styled.div`
   ${Shape}
   clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
-  background-color: crimson;
+  background-color: #79aac2;
 `
