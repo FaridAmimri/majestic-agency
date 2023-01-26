@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/majestic-agency/static/js/main.b6bc5f9a.js",
-    "static/media/feature.png": "/majestic-agency/static/media/feature.75318e253357c517f66b.png",
+    "main.js": "/majestic-agency/static/js/main.9ac3bd0f.js",
     "static/media/messy.png": "/majestic-agency/static/media/messy.ce9716548abf116e7f3e.png",
     "static/media/intro.jpg": "/majestic-agency/static/media/intro.ab42d78ed0e648deaad2.jpg",
+    "static/media/feature.png": "/majestic-agency/static/media/feature.23c9fcc538f70fbe1006.png",
     "static/media/puzzled.png": "/majestic-agency/static/media/puzzled.70494aef3a23f4dd97a9.png",
     "static/media/physical.png": "/majestic-agency/static/media/physical.41acd3394b1ecebe3790.png",
     "static/media/moral.png": "/majestic-agency/static/media/moral.332361990280b5df66d3.png",
@@ -11,9 +11,9 @@
     "static/media/formula.png": "/majestic-agency/static/media/formula.612b2068a6fe154b7590.png",
     "static/media/logo.png": "/majestic-agency/static/media/logo.3e3716f40dd27d43425b.png",
     "index.html": "/majestic-agency/index.html",
-    "main.b6bc5f9a.js.map": "/majestic-agency/static/js/main.b6bc5f9a.js.map"
+    "main.9ac3bd0f.js.map": "/majestic-agency/static/js/main.9ac3bd0f.js.map"
   },
   "entrypoints": [
-    "static/js/main.b6bc5f9a.js"
+    "static/js/main.9ac3bd0f.js"
   ]
 }
