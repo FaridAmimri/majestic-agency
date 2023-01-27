@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/majestic-agency/static/js/main.9ac3bd0f.js",
+    "main.js": "/majestic-agency/static/js/main.ca261903.js",
     "static/media/messy.png": "/majestic-agency/static/media/messy.ce9716548abf116e7f3e.png",
     "static/media/intro.jpg": "/majestic-agency/static/media/intro.ab42d78ed0e648deaad2.jpg",
     "static/media/feature.png": "/majestic-agency/static/media/feature.23c9fcc538f70fbe1006.png",
@@ -10,10 +10,13 @@
     "static/media/discreet.png": "/majestic-agency/static/media/discreet.66d2e02c14b453b3c23a.png",
     "static/media/formula.png": "/majestic-agency/static/media/formula.612b2068a6fe154b7590.png",
     "static/media/logo.png": "/majestic-agency/static/media/logo.3e3716f40dd27d43425b.png",
+    "static/media/box.png": "/majestic-agency/static/media/box.8bc1753b77bcc658c895.png",
+    "static/media/mail.png": "/majestic-agency/static/media/mail.be14fd8318eb8253ebfe.png",
+    "static/media/plane.png": "/majestic-agency/static/media/plane.5be1c6c231ef7a5086e6.png",
     "index.html": "/majestic-agency/index.html",
-    "main.9ac3bd0f.js.map": "/majestic-agency/static/js/main.9ac3bd0f.js.map"
+    "main.ca261903.js.map": "/majestic-agency/static/js/main.ca261903.js.map"
   },
   "entrypoints": [
-    "static/js/main.9ac3bd0f.js"
+    "static/js/main.ca261903.js"
   ]
 }
