@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/majestic-agency/static/js/main.21773d5d.js",
+    "main.js": "/majestic-agency/static/js/main.6c5c1a63.js",
     "static/media/messy.png": "/majestic-agency/static/media/messy.ce9716548abf116e7f3e.png",
     "static/media/intro.jpg": "/majestic-agency/static/media/intro.ab42d78ed0e648deaad2.jpg",
     "static/media/feature.png": "/majestic-agency/static/media/feature.23c9fcc538f70fbe1006.png",
@@ -14,9 +14,9 @@
     "static/media/mail.png": "/majestic-agency/static/media/mail.be14fd8318eb8253ebfe.png",
     "static/media/plane.png": "/majestic-agency/static/media/plane.5be1c6c231ef7a5086e6.png",
     "index.html": "/majestic-agency/index.html",
-    "main.21773d5d.js.map": "/majestic-agency/static/js/main.21773d5d.js.map"
+    "main.6c5c1a63.js.map": "/majestic-agency/static/js/main.6c5c1a63.js.map"
   },
   "entrypoints": [
-    "static/js/main.21773d5d.js"
+    "static/js/main.6c5c1a63.js"
   ]
 }
