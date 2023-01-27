@@ -44,7 +44,7 @@ function Price() {
         >
           <Item>Un devis personnalisé en 1h</Item>
           <Item>Adapté à VOS besoins et VOTRE situation </Item>
-          <Item>Servie à la demande</Item>
+          <Item>Servi à la demande</Item>
         </PriceCard>
       </CardContainer>
     </Container>
