@@ -137,6 +137,7 @@ const AgreementContainer = styled.div`
 
   @media only screen and (max-width: 480px) {
     margin-top: 10px;
+    margin-right: 0;
   }
 `
 
