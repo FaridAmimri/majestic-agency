@@ -139,6 +139,7 @@ const Right = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 20px;
 `
 
 const Item = styled.div`

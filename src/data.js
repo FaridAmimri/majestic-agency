@@ -40,7 +40,7 @@ export const physicalData = [
   {
     id: 4,
     subtitle:
-      'Personnes influentes: (célébrités, people, influenceurs, militants engagés, etc...)',
+      'Personnes influentes: célébrités, people, influenceurs, militants engagés, etc...',
     description:
       'Vous aimez votre anonymat et ne souhaitez pas divulguer votre adresse ? Quel que soit vos raisons: vous avez le droit ! Majestic domiciliation vous propose un service 100% privé et sécurisé.'
   }
