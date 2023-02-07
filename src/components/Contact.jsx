@@ -179,6 +179,9 @@ const Container = styled.div`
   padding-left: 40px;
   color: white;
 
+  @media only screen and (min-width: 1440px) {
+    min-height: 400px;
+  }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     padding: 0;
   }

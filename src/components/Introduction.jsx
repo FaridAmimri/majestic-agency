@@ -21,6 +21,9 @@ const Container = styled.div`
   height: calc(100vh - 50px);
   display: flex;
 
+  @media only screen and (min-width: 1440px) {
+    height: calc(100vh - 220px);
+  }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     justify-content: center;
   }

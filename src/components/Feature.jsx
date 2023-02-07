@@ -64,7 +64,7 @@ export default Feature
 const Container = styled.div`
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  padding: 60px 0;
 `
 
 const Left = styled.div`
@@ -84,6 +84,9 @@ const Image = styled.img`
   left: 0vw;
   top: 6vh;
 
+  @media only screen and (min-width: 1440px) {
+    top: 0;
+  }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     display: none;
   }
@@ -131,6 +134,9 @@ const Advantage = styled.div`
   display: flex;
   margin-bottom: 20px;
 
+  @media only screen and (min-width: 1440px) {
+    margin-bottom: 40px;
+  }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     margin-bottom: 10px;
   }

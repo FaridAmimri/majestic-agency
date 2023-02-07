@@ -58,6 +58,9 @@ const Header = styled.h1`
   margin: 15px 0;
   color: #79aac2;
 
+  @media only screen and (min-width: 1440px) {
+    margin: 30px 0;
+  }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     font-size: 22px;
   }

@@ -46,6 +46,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: 1440px) {
+    min-height: 60px;
+  }
 `
 
 const Copyright = styled.span``
