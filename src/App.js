@@ -1,5 +1,6 @@
 /** @format */
 
+import './global.css'
 import styled, { css } from 'styled-components'
 import Navbar from './components/Navbar'
 import Introduction from './components/Introduction'
@@ -11,8 +12,6 @@ import Footer from './components/Footer'
 import IntroIcon from './assets/intro.jpg'
 
 function App() {
-  // const smallScreen = window.screen.width <= 480 ? true : false
-
   return (
     <>
       <Container>
@@ -70,10 +69,10 @@ const IntroductionShape = styled.div`
   clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 45% 100%);
 
   @media only screen and (max-width: 480px) {
-    background-color: #79aac2;
+    background-color: var(--background-color);
   }
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
-    background-color: #79aac2;
+    background-color: var(--background-color);
   }
 `
 
@@ -97,14 +96,8 @@ const FeatureShape = styled.div`
   background-color: #ff912463;
 `
 
-// const ServiceShape = styled.div`
-//   ${Shape}
-//   clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
-//   background-color: #f88497;
-// `
-
 const PriceShape = styled.div`
   ${Shape}
   clip-path: polygon(33% 0, 100% 0%, 100% 100%, 67% 100%);
-  background-color: #79aac2;
+  background-color: var(--background-color);
 `
