@@ -11,6 +11,9 @@ function Navbar() {
     palette: {
       primary: {
         main: '#fff'
+      },
+      success: {
+        main: '#000000'
       }
     }
   })
@@ -32,6 +35,11 @@ function Navbar() {
             <MenuItem>
               <a href='#price'>Nos solutions</a>
             </MenuItem>
+            <ThemeProvider theme={theme}>
+              <Button variant='contained' size='small' color='success'>
+                <a href='#contact'>Contact</a>
+              </Button>
+            </ThemeProvider>
           </Menu>
         </Center>
         <Right>
@@ -45,6 +53,25 @@ function Navbar() {
           <MarianneImg src={MarianneIcon}></MarianneImg>
         </Right>
       </Wrapper>
+
+      <MenuMobile>
+        <MenuMobileUl>
+          <MenuItem>
+            <a href='#feature'>Services</a>
+          </MenuItem>
+          <MenuItem>
+            <a href='#service'>Pour Qui ?</a>
+          </MenuItem>
+          <MenuItem>
+            <a href='#price'>Nos solutions</a>
+          </MenuItem>
+          <ThemeProvider theme={theme}>
+            <Button variant='contained' size='small' color='success'>
+              <a href='#contact'>Contact</a>
+            </Button>
+          </ThemeProvider>
+        </MenuMobileUl>
+      </MenuMobile>
     </Container>
   )
 }
@@ -94,18 +121,23 @@ const Center = styled.div`
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     flex: 3;
     justify-content: center;
+    position: absolute;
+    top: 90px;
   }
 `
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
+  align-items: center;
 
   @media only screen and (min-width: 481px) and (max-width: 1024px) {
     padding: 0;
+    display: none;
   }
   @media only screen and (max-width: 480px) {
     padding: 0;
+    display: none;
   }
 `
 
@@ -149,5 +181,31 @@ const MarianneImg = styled.img`
   }
   @media only screen and (max-width: 480px) {
     display: none;
+  }
+`
+
+const MenuMobile = styled.div`
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100px;
+
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+const MenuMobileUl = styled.ul`
+  display: flex;
+  list-style: none;
+  align-items: center;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    padding: 0;
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 0;
   }
 `
