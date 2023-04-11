@@ -7,8 +7,8 @@ function Introduction() {
   return (
     <Container>
       <Left>
-        <Title>La solution qui change la vie</Title>
-        <Description>Vous en avez rêvé, on l'a fait.</Description>
+        <Title>Majestic Domiciliation</Title>
+        <Description>Le facteur confiance</Description>
       </Left>
       <Animation />
     </Container>
